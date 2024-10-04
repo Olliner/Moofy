@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header>
+  <ion-toolbar class="logo">
+    <ion-title style="color: white;" class="ion-text-center">
+      Moofy
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content style="--background:black;">
+<div style="display: flex;justify-content: center;text-align: center;flex-direction: column;margin-top: 10rem;">
+  <h2 style="color: white;font-weight: 700;font-size: 35px;">Bem vindo!</h2>
+  <p style="color: white;font-size: 20px;">Aplicativo para listar filmes em cartaz</p>
+  <div>
+    <ion-button (click)="goToCartaz()">Cartaz</ion-button>
   </div>
+  <p style="color: white;font-size: 20px;">E os mais bem avaliados pelo publico</p>
+  <div>
+    <ion-button (click)="goToFavoritos()">Favoritos</ion-button>
+  </div>
+</div>
+
 </ion-content>

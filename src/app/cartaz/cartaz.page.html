@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="logo">
+    <ion-title style="color: white" class="ion-text-center">Cartaz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: black">
+  <div style="display: flex; justify-content: center; padding: 3rem 0">
+    <ion-button (click)="goToPrincipal()" style="margin-right: 1rem">Principal</ion-button>
+    <ion-button (click)="goToFavoritos()">Favoritos</ion-button>
+  </div>
+
+  <!-- Seção para exibir os filmes em cartaz -->
+  <div class="movie-list">
+    <h2 style="color: white; text-align: center;">Filmes em Cartaz</h2>
+
+    <div *ngFor="let movie of nowPlayingMovies" class="movie-item">
+      <ion-card>
+        <img [src]="baseUrl + movie.poster_path" alt="{{ movie.title }}" />
+        <ion-card-header>
+          <ion-card-title style="color: rgb(12, 11, 11)">{{ movie.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Sinopse do filme -->
+          <p style="color: rgb(14, 7, 7)">{{ movie.overview }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

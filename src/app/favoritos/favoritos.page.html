@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="logo">
+    <ion-title style="color: white" class="ion-text-center">Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:black;">
+  <div style="display: flex; justify-content: center;padding: 3rem 0;">
+    <ion-button (click)="goToPrincipal()" style="margin-right: 1rem;">Principal</ion-button>
+    <ion-button (click)="goToCartaz()">Cartaz</ion-button>
+  </div>
+
+  <!-- Seção para exibir os filmes mais bem avaliados -->
+  <div class="movie-list">
+    <h2 style="color: rgb(255, 255, 255); text-align: center;">Filmes Mais Bem Avaliados</h2>
+
+    <div *ngFor="let movie of topRatedMovies"  class="movie-item">
+      <ion-card>
+        <img [src]="baseUrl + movie.poster_path" alt="{{ movie.title }}" />
+        <ion-card-header>
+          <ion-card-title style="color: rgb(12, 11, 11)">{{ movie.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p style="color: rgb(0, 0, 0)">{{ movie.overview }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

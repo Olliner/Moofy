@@ -1,2 +1,12 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+ion-toolbar {
+    --background: #800080;
+  }
+ion-button {
+--background: #800080; /* Roxo */
+--color: #ffffff; /* Branco */
+width: 170px;
+height: 40px;
+font-size: 20px;
+}
